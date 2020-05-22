@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang=“en”>
+	<head>
+	
+		<meta name="author" content=“Devini">
+		<meta name="keywords" content="Sports Arcade, feedback, Sports Arcade feedback ">
+		<meta name="description" content="Sports equipments selling website feedback page"> 
+		
+		<title>Sports-Feedback page</title>
+
+		<!-- <link rel="stylesheet" href="template.css" type="text/css"> -->
+		<link rel="stylesheet" href="feedback_style.css" type="text/css">
+		<script src="tempjs.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--importing Font Awesome-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><!--importing jquery library-->
+
+		
+	</head>
+	<body>
+
+		
+	<!--navigation bar-->
+		<!-- <div id="header" role="header">
+	
+			<a href="index.html"  role="navigate" aria-label="tohome"></a>
+		 <div id="logo"><img src="css/bg_images/logo_1.png" width="300px" height="400px"></div>
+		
+			<div id="nav" role="navigation"  aria-label="Main Menu">
+				<ul>
+
+  					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="product.html">Product</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+					<li><a href="feedback.html">Feedback</a></li>
+  					
+				</ul>
+			</div>
+		
+		</div> -->
+
+		<!--content used for aligning the rest of the divs properly due to the transparent header-->
+		<div id="mock_content" aria-hidden="true"></div>
+	
+		<div id="content" role="group">
+			<div id="details1" role="group">
+				<div id="info1" role="contentinfo">
+					<h1>Feedback Form</h1>
+					<!--form elements-->
+					<form name="details">
+						<div id="name">
+							<h3>Full Name</h3>
+							<label>Prefix</label>
+							<input type="text" name="Prefix" autofocus placeholder="Enter as Mr/Miss/Mrs" required>
+							<label>First Name</label>
+							<input type="text" name="FName" placeholder="Enter your First name" required autofocus >
+							<label>Middle Name</label>
+							<input type="text" name="MName" placeholder="Enter your Middle name" required autofocus >
+							<label>Last Name</label>
+							<input type="text" name="LName" placeholder="Enter your Last name" required autofocus > 
+						</div>
+				</div>
+					<div id="info2" role="contentinfo">
+							<h3>Contact Details</h3>
+						<label>e-mail Address</label>
+						<input type="text" name="email" autofocus placeholder="Enter your e-mail address" required>
+						<h3>Feedback</h3>
+						<label>Comments</label>
+						<textarea name="comments" rows="15" col="500" placeholder="Please comment us on our service" autofocus required></textarea>
+						<label>Rate Us</label>
+					</div>
+				</div>
+			
+			<!--Ratings using radio buttons-->
+				<div id="stars" role="group">
+					<ul>
+						<li><label  for="star1">
+						<i class="fa fa-star" aria-label="picture" alt="1 out of 5 starts"></i><!--i implements the star icon from Font Awesome-->
+						</label><input  id="star1" type="radio" name="ratings" value="Bad"/>
+						</li>
+
+							<li><label  for="star2">
+						<i class="fa fa-star" aria-label="picture" alt="2 out of 5 starts"></i><!--i implements the star icon from Font Awesome-->
+						</label><input  id="star2" type="radio" name="ratings" value="Poor"/>
+						</li>
+
+							<li><label  for="star3">
+						<i class="fa fa-star" aria-label="picture" alt="3 out of 5 starts"></i><!--i implements the star icon from Font Awesome-->
+						</label><input id="star3" type="radio" name="ratings" value="Ok"/>
+						</li>
+
+							<li><label  for="star4">
+						<i class="fa fa-star" aria-label="picture" alt="4 out of 5 starts"></i><!--i implements the star icon from Font Awesome-->
+						</label><input  id="star4" type="radio" name="ratings" value="Good"/>
+						</li>
+
+							<li><label  for="star5">
+						<i class="fa fa-star" aria-label="picture" alt="5 out of 5 starts"></i><!--i implements the star icon from Font Awesome-->
+						</label><input  id="star5" type="radio" name="ratings" value="Excellent"/>
+						</li>
+							
+					</ul>
+				</div>		
+
+				<div id="buttons">
+					<input type="button" id="btn1" name="validatebtn" value="Submit" onclick="Validate()"><!--this button triggers the validating function-->
+					<input type="reset"  id="btn2" name="resetbtn" value="Reset">
+				</div>
+
+				</form>
+		</div>
+
+		<div id="footer">
+			<p role="navigate"><a href="#" alt="to cv">Copyright © 2018 Udara Shalini</a></p>
+		</div>
+		
+		<script type="text/javascript">
+		
+		//validates all the input values
+		function Validate()
+			{
+				if(document.details.Prefix.value==""){
+					alert("Prefix cannot be empty");
+					return;
+					
+				}
+				
+				if(document.details.FName.value==""){
+					alert("First Name cannot be empty");
+					return;
+				}
+				
+				
+				if(document.details.LName.value==""){
+					alert("Last Name cannot be empty");
+					return;
+				}
+			//seeing if the user has rated
+					var x=0;
+					var i;
+					for(i=0; i<5; i++){
+						if(document.details.ratings[i].checked){
+							x=1;
+							break;
+						}
+					}
+					if(x==0){
+						alert("Please Rate Us");
+						return;
+					}
+					
+					//storing the status of the rating in a variable caled rate
+				var rate;
+				
+				if(i==4){
+					rate=document.details.ratings[4].value;
+				}
+				else if(i==3){
+					rate=document.details.ratings[3].value;
+				}
+				else if(i==2){
+					rate=document.details.ratings[2].value;
+				}
+				else if(i==1){
+					rate=document.details.ratings[1].value;
+				}
+				else if(i==0){
+					rate=document.details.ratings[0].value;
+				}
+				// final message
+				alert("Dear "+document.details.FName.value+","+"\n"+"Thank you very much for your feedback."+"\n"+"You have rated our site as "+rate+", and your comment was "+document.details.comments.value);
+		}
+		
+		
+		//this jquery controls the functioning of the rating stars
+		//reference: https://www.youtube.com/watch?v=3VW1ws88MKc
+			$('li').on('click',function(){
+			//removes both classes when the user clickes on  a star and adds them back according to the nature of the selection
+				$('li').removeClass('active');
+				$('li').removeClass('secondary-active');
+				$(this).addClass('active');//will add the active class to the selected star
+				$(this).prevAll().addClass('secondary-active');// will add the secondary-active class to all the previous stars from the selected star
+				})
+			
+			
+			//reference:https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+			//this jquery takes care of the smooth scrolling
+			$(document).ready(function(){
+			$("a").on('click', function(event) {
+			
+			//function will fire when the user clicks on the relevant links
+
+			var headerHeight = $("div#header").height();//taking the height of the header to display the components below it
+			
+			if (this.hash !== "") {
+			//wil only work if the user clicks on one of the relevant links
+			  event.preventDefault();//prevent default function prom happening
+			  var hash = this.hash;//getting the id of the selected link
+			  
+			  //scrolling to the relavent part of the page the user requested
+			  if(hash=="#info1"){
+				  $('html, body').animate({
+				  //will take specified value margin to the top of the page
+					scrollTop: 100-headerHeight
+						}, 800, function(){
+						//800 specifies the scrolling time
+						 window.location.hash = hash;
+						 });
+			  }
+			  
+			  else if(hash=="#info2"){
+				  $('html, body').animate({
+					scrollTop: 800-headerHeight
+						}, 800, function(){
+						 window.location.hash = hash;
+						 });
+			  }
+			  
+			  else if(hash=="#footer"){
+				  $('html, body').animate({
+					scrollTop: 1500-headerHeight
+						}, 800, function(){
+						 window.location.hash = hash;
+						 });
+			  }
+	
+			} 
+		  });
+		});
+			
+		</script>
+
+	</body>
+</html>

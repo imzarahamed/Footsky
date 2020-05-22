@@ -1,0 +1,85 @@
+.header {
+    height:250px;
+    background-color:#006633;
+}
+.picture{
+   width:190px;
+   height:190px;
+   padding: 20px;
+   float:right;
+  
+}
+.nav
+{
+  height : 1070px;background-color:#424242;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+.right
+{
+    float: left;
+    margin-top: 50px;
+    padding-left:5px;
+    height: auto;
+    width: 99%;
+    background-color: #e6ffee;
+	border-style: double; 
+    }
+
+.left
+{
+    float: left;
+    margin-top: 50px;
+    margin-right: -90px;
+    height: relative;
+    width: 10%;
+    background-color: #4160E8;
+    }
+    
+#footer
+{
+    height:40px;
+    clear:both;
+    position: relative;
+    background-color: #C1E3E1;
+	text-align:center;
+    }
+    
+h3
+{
+    text-decoration: underline;
+    }
+
+table
+{
+    border: 1px dashed black;
+    }
+td
+{
+    padding: 2px;
+    border: 1px solid #E88741;
+    }
+
+#course-name
+{
+    font-weight:bold;
+    }
+#heading
+{
+    font-weight:bold;
+    }
+	
+	
+#scroll {
+  background-color: #00802b;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border-style: sollid;
+  border-width:2px;
+  border-color:#003312;
+  cursor: pointer;
+}

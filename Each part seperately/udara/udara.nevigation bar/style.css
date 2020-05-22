@@ -1,0 +1,76 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+/*header*/
+header{
+  width: 100%;`
+  position: absolute;
+  z-index: 999999;
+}
+/*nevbar fonts*/
+.navbar ul li a{
+  font-family: "Righteous",sans-serif;
+  text-decoration: none;
+  color: white;
+}
+/*logo*/
+.logo{
+  background: url("logo Final.png");
+  background-size: cover;
+  height: 80px;
+  width: 300px;
+  position: absolute;
+  margin-top: 4px;
+}
+/*nevbar tab*/
+.navbar{
+  width: 100%;
+  padding: 0px;
+  position: fixed;
+  top:0px;
+  text-align: center;
+  transition: .5s;
+  background: rgba(0,0,0,0.5);
+}
+
+.navbar a:hover .logo{
+  opacity: 0.9;
+}
+/*nevbar catorizing*/
+.navbar ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 25px 50px;
+  color: white;
+  font-size: 24px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.navbar ul li:hover{
+  background: orange;
+  transition: .5s;
+}
+
+
+.stadiumPic{
+  background: url("pitch.jpg");
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+}
+
+.picOverlay{
+  width: 100%;
+  height: 500px;
+  background: rgba(0,0,0,.5);
+}
+
+.stadiumPic .picOverlay h1{
+  color: white;
+  margin-left: 10%;
+  margin-top: 10%;
+  position: absolute;
+  font-size: 60px;
+}

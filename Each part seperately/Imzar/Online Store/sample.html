@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>example</title>
+	<link rel="stylesheet" type="text/css" href="storestyle.css">
+</head>
+<body>
+	<header>
+	  <div class="navbar" id='nav'>
+	    <a href="index.html"><div class="logo"></div></a>
+	    <ul>
+	      <li>Home</li>
+	      <li>Gallery</li>
+	      <li>Blog</li>
+	      <li>Quiz</li>
+	      
+	    </ul>
+	  </div>
+	</header>
+      <div class="stadiumPic">
+			<div class="image-container">
+				<div class="text" id="text1">Welcome to Store</div>
+				    <input class="zoom" type="button" value="Increase Font Size 1px" onclick="increaseFontSizeBy1px()">
+
+					<script> 
+				 
+					function increaseFontSizeBy1px() {
+					   txt = document.getElementById('b');
+					   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+					   currentSize = parseFloat(style);
+					   txt.style.fontSize = (currentSize + 1) + 'px';
+						  }
+					</script>
+
+					<input class="zoom" type="button" value="Decrease Font Size 1px" onclick="decreaseFontSizeBy1px()">
+
+					<script> 
+				 
+					function decreaseFontSizeBy1px() {
+					   txt = document.getElementById('b');
+					   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+					   currentSize = parseFloat(style);
+					   txt.style.fontSize = (currentSize - 1) + 'px';
+						  }
+					</script>
+			</div>
+  </div>
+	<div class="first" id="b">
+	
+	<div class="columns">
+	<div class="card">
+		<img src="css/images/football1.jpg" alt="football" style="width:100%">
+	  <h1>Football</h1>
+	  <p class="price">$50.99</p>
+	  <p>Inspired by Cristiano Ronaldo, the Nike Football features tight seam tolerance for a consistent feel and a multi-panel design that provides accurate ball flight.</p>
+	  <p><button type="button" onclick="smoothScroll(document.getElementById('second'))">Buy</button></p>
+	</div>
+	</div>
+
+	<div class="columns">
+		<div class="card">
+		  <img src="css/images/Tshirt.jpg" alt="Tshirt" style="width:100%">
+		  <h1>T-shirts</h1>
+		  <p class="price">$20.99</p>
+		  <p>This Arsenal Away Football Shirt 2018 2019 is what the gunners will be wearing when they are away from the Emirates Stadium.</p>
+		  <p><button type="button" onclick="smoothScroll(document.getElementById('second'))">Buy</button></p>
+		</div>
+	</div>
+
+	<div class="columns">
+		<div class="card">
+		  <img src="css/images/Bootz.jpg" alt="Bootz" style="width:100%">
+		  <h1>Boots</h1>
+		  <p class="price">$149.99</p>
+		  <p>The Nike PhantomVNM Elite FG is engineered for powerful, precise strikes that wins.This gives maximum comfort and protection.</p>
+		  <p><button type="button" onclick="smoothScroll(document.getElementById('second'))">Buy</button></p>
+		</div>
+	</div>
+
+	<div class="columns">
+		<div class="card">
+		  <img src="css/images/headgear2.jpg" alt="Headgear" style="width:100%">
+		  <h1>Headgear</h1>
+		  <p class="price">$30.45</p>
+		  <p>Certified by International Football Board thru stringent testing to meet World Football Standards.This is made up from x-50 type fibre to max protection. </p>
+		  <p><button type="button" onclick="smoothScroll(document.getElementById('second'))">Buy</button></p>
+		</div>
+	</div>
+	</div>
+	
+	<div class="second" id="b">
+		<!--comment box-->
+	</div>
+		<div class="row">
+		  <div class="col-75">
+			<div class="container">
+			  <form>
+			  
+				<div class="row">
+				  <div class="col-50">
+					<h3>Billing Address</h3>
+					<label for="fname"><i class="fa fa-user"></i> Full Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="M.I.I.Ahamed">
+					<label for="email"><i class="fa fa-envelope"></i> Email</label>
+					<input type="text" id="email" name="email" placeholder="Name123@gmail.com">
+					<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+					<input type="text" id="adr" name="address" placeholder="123/A,15th Street,Colombo">
+					<label for="city"><i class="fa fa-institution"></i> City</label>
+					<input type="text" id="city" name="city" placeholder="Sri lanka">
+
+				  </div>
+
+				  <div class="col-50">
+					<h3>Payment</h3>
+					<label for="fname">Accepted Cards</label>
+					<div class="icon-container">
+					  <i class="fa fa-cc-visa" style="color:navy;"></i>
+					  <i class="fa fa-cc-amex" style="color:blue;"></i>
+					  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+					  <i class="fa fa-cc-discover" style="color:orange;"></i>
+					</div>
+					<label for="ccnum">Credit card number</label>
+					<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+					<label for="expmonth">Exp Month</label>
+					<input type="text" id="expmonth" name="expmonth" placeholder="September">
+					<div class="row">
+					  <div class="col-50">
+						<label for="expyear">Exp Year</label>
+						<input type="text" id="expyear" name="expyear" placeholder="2018">
+					  </div>
+					  <div class="col-50">
+						<label for="cvv">CVV</label>
+						<input type="text" id="cvv" name="cvv" placeholder="352">
+					  </div>
+					</div>
+				  </div>
+				  
+				</div>
+				<label>
+				  <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+				</label>
+				<button id="demo" type="submit" onclick="detail()" class="btn">Confirm Order</button>
+			  </form>
+			</div>
+		  </div>
+		  <div class="col-25">
+			<div class="container">
+			  <h4>Cart <span class="price" style="color:black"><b>Count</b></span></h4><br>
+				
+				  <p>Football<span class="price">$50.99
+						<select id="football" name="football" onchange="getPrice1()">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						</select>
+						</span></p><br>
+				
+				  <p>T-shirt<span class="price">$20.99
+						<select id="shirt" name="shirt" onchange="getPrice1()">
+						  <option  value="0">0</option>
+						  <option  value="1">1</option>
+						  <option  value="2">2</option>
+						  <option  value="3">3</option>
+						</select>
+						</span></p><br>
+				
+				  <p>Boots<span class="price">$149.99
+						<select id="boots" name="boots" onchange="getPrice1()">
+						  <option  value="0">0</option>
+						  <option  value="1">1</option>
+						  <option  value="2">2</option>
+						  <option  value="3">3</option>
+						</select>
+						</span></p><br>
+				
+				  <p>Headgear<span class="price">$30.45
+						<select id="headgear" name="headgear" onchange="getPrice1()">
+						  <option  value="0">0</option>
+						  <option  value="1">1</option>
+						  <option  value="2">2</option>
+						  <option  value="3">3</option>
+						</select>
+						</span></p><br>
+			  
+			  <hr>
+			  <p>Total</p><p id="total"></p>
+				<button type = "button" onclick = "getPrice1()" class="btn" > Place Order </button>
+			</div>
+		  </div>
+		</div>
+	<br>
+    <script type="text/javascript" src="scroll.js"></script>
+	<footer>
+	<svg width="1340" height="460">
+	  <rect width="1340px" height="450px" style="fill:black;stroke-width:2;stroke:black;stroke-opacity:1" />
+				
+				<line x1="20" y1="360" x2="20" y2="432" style="stroke:#ff66ff;stroke-width:2;stroke-opacity:0.6" />
+				<line x1="30" y1="360" x2="30" y2="432" style="stroke:#ff66ff;stroke-width:2;stroke-opacity:0.6" />
+					<text x="37" y="377" style="fill:white;font-size:17px;font-family:'Righteous', sans-serif">Contact US : </text>
+					<text x="37" y="402" style="fill:white;font-size:17px;font-family:'Righteous', sans-serif">1234567890</text>
+					<text x="37" y="427" style="fill:white;font-size:17px;font-family:'Righteous', sans-serif">123wert@werfs.com</text>
+		
+		<defs>
+			<filter id="f1" x="0" y="0" width="200%" height="200%">
+				<feOffset result="offOut" in="SourceGraphic" dx="4" dy="4" />
+				<feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+				<feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+				<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+			</filter>
+		</defs>
+		<!-- <defs>
+			<linearGradient id="grad1" x1="0%" y1="60%" x2="90%" y2="100%">
+				<stop offset="0%" style="stop-color:#ffb3ff;stop-opacity:1" />
+				<stop offset="100%" style="stop-color:#730099;stop-opacity:1" />
+			</linearGradient>
+		</defs> -->
+		
+		<rect x = "50" y = "38" rx= "10" ry = "10" width="223" height="300" stroke="grey" stroke-width="1" filter="url(#f1)" fill="#595959" fill-opacity = "0.6" />
+			<line x1="161" y1="73" x2="161" y2="78" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="161" y1="80" x2="161" y2="296" style="stroke:#400080;stroke-width:2;stroke-opacity:0.5" />
+			<line x1="161" y1="298" x2="161" y2="303" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="200" y1="52" x2="258" y2="52" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="258" y1="52" x2="258" y2="110" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<a href = "">             																				
+			<text x="66" y="90" style="fill:white;font-size:25px;font-family:'Righteous', sans-serif">Home</text>
+				<line x1="66" y1="98" x2="110" y2="98" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" />
+				<line x1="113" y1="98" x2="116" y2="98" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" /></a>
+			<a href ="">	          																<!--link this to a reference link in the about us section -->
+			<text x="63" y="140" style="fill:white;font-size:20px;font-family:'Righteous', sans-serif">About Us</text></a>
+			<a href = "">               							<!--link this to a reference link in our photo section in the home page(if necessary) -->
+			<text x="63" y="180" style="fill:white;font-size:20px;font-family:'Righteous', sans-serif">Our Team</text></a>
+				<line x1="187" y1="188" x2="187" y2="289" style="stroke:purple;stroke-width:2;stroke-opacity:0.9" />
+				<a href = "">               <!-- link these to our CV's-->
+				<text x="192" y="210" style="fill:white;font-size:16px">Rusiru</text></a>
+				<a href = "">
+				<text x="192" y="232" style="fill:white;font-size:16px">Inshaf</text></a>
+				<a href = "">
+				<text x="192" y="254" style="fill:white;font-size:16px">Udara</text></a>
+				<a href = "">
+				<text x="192" y="276" style="fill:white;font-size:16px">Imzar</text></a>
+			
+
+			
+		
+		<rect x = "305" y = "38" rx= "10" ry = "10" width="223" height="300" stroke="grey" stroke-width="1" filter="url(#f1)" fill="#595959" fill-opacity = "0.6"  />
+			<line x1="416" y1="73" x2="416" y2="78" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="416" y1="80" x2="416" y2="296" style="stroke:#400080;stroke-width:2;stroke-opacity:0.5" />
+			<line x1="416" y1="298" x2="416" y2="303" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="455" y1="52" x2="513" y2="52" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="513" y1="52" x2="513" y2="110" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<a href = "">                <!--linked to the gallery-->
+			<text x="321" y="135" style="fill:white;font-size:25px;font-family:'Righteous', sans-serif">Gallery</text>
+				<line x1="321" y1="143" x2="372" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" />
+				<line x1="375" y1="143" x2="378" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" /></a>
+			<a href = "">                  <!--linked to a reference in the image gallery-->
+			<text x="423" y="160" style="fill:white;font-size:20px">Recent,</text>
+			<text x="423" y="190" style="fill:white;font-size:20px">Big Events</text></a>
+
+		<rect x = "560" y = "38" rx= "10" ry = "10" width="223" height="300" stroke="grey" stroke-width="1" filter="url(#f1)" fill="#595959" fill-opacity = "0.6"  />
+			<line x1="671" y1="73" x2="671" y2="78" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="671" y1="80" x2="671" y2="296" style="stroke:#400080;stroke-width:2;stroke-opacity:0.5" />
+			<line x1="671" y1="298" x2="671" y2="303" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="710" y1="52" x2="768" y2="52" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="768" y1="52" x2="768" y2="110" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<a href = "">             <!--linked to the store-->
+			<text x="576" y="135" style="fill:white;font-size:25px;font-family:'Righteous', sans-serif">Store</text>
+				<line x1="576" y1="143" x2="618" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" />
+				<line x1="621" y1="143" x2="624" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" /></a>
+			<a href = "">         <!--same reference linking..-->
+			<text x="678" y="160" style="fill:white;font-size:20px">Sales And</text>
+			<text x="678" y="190" style="fill:white;font-size:20px">Shopping</text></a>
+			
+		<rect x = "815" y = "38" rx= "10" ry = "10" width="223" height="300" stroke="grey" stroke-width="1" filter="url(#f1)" fill="#595959" fill-opacity = "0.6"  />
+			<line x1="926" y1="73" x2="926" y2="78" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="926" y1="80" x2="926" y2="296" style="stroke:#400080;stroke-width:2;stroke-opacity:0.5" />
+			<line x1="926" y1="298" x2="926" y2="303" style="stroke:#400080;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="965" y1="52" x2="1023" y2="52" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="1023" y1="52" x2="1023" y2="110" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<a href = "">
+			<text x="831" y="135" style="fill:white;font-size:25px;font-family:'Righteous', sans-serif">Blog</text>
+				<line x1="831" y1="143" x2="870" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" />
+				<line x1="873" y1="143" x2="876" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" />
+				</a>
+			<a href = "">
+			<text x="933" y="160" style="fill:white;font-size:20px">Feed Back,</text>
+			<text x="933" y="190" style="fill:white;font-size:20px">Form.</text></a>
+			
+		
+		<rect x = "1065" y = "38" rx= "10" ry = "10" width="223" height="300" stroke="grey" stroke-width="1" filter="url(#f1)" fill="#595959" fill-opacity = "0.6"  />
+			<line x1="1215" y1="52" x2="1273" y2="52" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<line x1="1273" y1="52" x2="1273" y2="110" style="stroke:black;stroke-width:2;stroke-opacity:0.4" />
+			<a href = "">
+			<text x="1080" y="135" style="fill:white;font-size:23px;font-family:'Righteous', sans-serif">Hot Topics</text>
+				<line x1="1083" y1="143" x2="1125" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" />
+				<line x1="1128" y1="143" x2="1131" y2="143" style="stroke:#4d0099;stroke-width:2;stroke-opacity:0.7" /></a>
+				
+		
+			<text x="1083" y="175" style="fill:white;font-size:20px">Recent updates</text>
+			<text x="1083" y="205" style="fill:white;font-size:20px">Top five Stadiums</text>
+			<text x="1083" y="235" style="fill:white;font-size:20px">History of Football</text>
+			<text x="1083" y="265" style="fill:white;font-size:20px">The Greates Sport</text>
+			
+			
+		<line x1="1320" y1="30" x2="1320" y2="410" style="stroke:#ff66ff;stroke-width:2;stroke-opacity:0.6" />
+		<line x1="1310" y1="30" x2="1310" y2="410" style="stroke:#ff66ff;stroke-width:2;stroke-opacity:0.6" />	
+
+		
+		
+	</svg>
+    <p>Site Designed and Developed by <a href="cv.html">Imzar Ahamed</a></p>
+	<a href = "#text1"><button id="top">Click to go to the Top</button></a>
+	</footer>
+</body>
+</html>
